@@ -20,3 +20,31 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
 
+## Using Todo API
+
+To get all the todos, GET `/api/todos`
+
+To add a new todo, POST to `/api/todos` with body:
+```
+{
+  todo: {
+    description: "your description here",
+    done: true/false
+  }
+}
+```
+
+To update a todo by id, PUT to `/api/todos/:id` with body:
+```
+{
+  todo: {
+     description: "changing description with id :id",
+     done: true
+  }
+}
+```
+
+To delete a todo by id, DELETE `/api/todos/:id`
+
+To get a todo by id, GET `/api/todos/:id`
+
